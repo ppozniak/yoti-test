@@ -191,13 +191,14 @@ module.exports = {
                       sourceMap: true,
                       importLoaders: 2,
                       localIdentName: '[name]_[local]__[hash:base64:5]',
+                      camelCase: 'dashes'
                     }
                   },
                   {
                     loader: 'sass-loader',
                     options: {
-                      data: '@import "_yoti-variables";',
-                      includePaths: ['src/styles/yoti-shared-library/']
+                      data: '@import "_globals";',
+                      includePaths: ['src/styles']
                     }
                   }
                 ]

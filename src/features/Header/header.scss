@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: $color-16;
+  border-bottom: 1px solid $color-15;
+  padding: Rem(30) 0;
+  height: $headerHeight;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  width: $sidebarWidth;
+}
