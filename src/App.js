@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import Sidebar from '@features/Sidebar';
 
 class App extends Component {
   render() {
     return (
       <div>
+        <Sidebar />
         <div className="icon-logo">
-        <span className="sr-only">Yoti</span>
+          <span className="sr-only">Yoti</span>
         </div>
-        <span className="icon-verified"></span>
+        <span className="icon-verified" />
         <h1>Yoti app</h1>
       </div>
     );
