@@ -5,6 +5,10 @@ import ActivityList from '@features/Activity';
 
 import styles from './styles/layout.scss';
 
+import mockData from './mock-data.json';
+
+console.log(mockData);
+
 class App extends Component {
   render() {
     return (
@@ -16,7 +20,7 @@ class App extends Component {
             <h3>Activity</h3>
             <p className="m-sm-b-40">See a record of everyone you have shared details with.</p>
 
-            <ActivityList />
+            <ActivityList receipts={mockData.receipts} />
           </main>
         </div>
       </React.Fragment>
