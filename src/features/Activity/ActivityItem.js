@@ -6,7 +6,7 @@ const ActivityItem = ({ type, transaction, application }) => {
   const date = moment.unix(transaction['unix-timestamp']);
 
   return (
-    <li className={`${styles.activityItem} m-sm-b-60`}>
+    <li className={`${styles.activityItem} m-xs-b-60`}>
       <a className={styles.activity__link} href="#item">
         <div className={styles.activity__header}>{date.format('L')}</div>
         <div className={styles.activity__content}>
