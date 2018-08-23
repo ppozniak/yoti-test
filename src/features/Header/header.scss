@@ -3,7 +3,6 @@
   align-items: center;
   background-color: $color-16;
   border-bottom: 1px solid $color-15;
-  padding: Rem(30) 0;
   height: $headerHeight;
 }
 
@@ -11,4 +10,28 @@
   display: flex;
   justify-content: center;
   width: $sidebarWidth;
+}
+
+.right-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  height: 100%;
+}
+
+.profile-img {
+  width: Rem(75);
+  height: Rem(75);
+}
+
+.profile-link {
+  padding: 0 Rem(52);
+}
+
+.connected-button {
+  display: flex;
+  align-items: baseline;
+  height: 100%;
+  background-color: $color-1a;
+  padding: 0 Rem(26);
 }
