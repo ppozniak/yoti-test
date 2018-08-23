@@ -21,7 +21,12 @@ export default class ModalTrigger extends Component {
           closeModal: this.closeModal,
           show: this.state.show,
         })}
-        {this.state.show && this.props.modal}
+        {this.state.show &&
+          React.cloneElement(this.props.modal, {
+            closeModal: this.closeModal,
+            openModal: this.openModal,
+            visible: this.state.show,
+          })}
       </React.Fragment>
     );
   }

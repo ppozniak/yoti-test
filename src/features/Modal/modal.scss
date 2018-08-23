@@ -1,18 +1,56 @@
 .overlay {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(#000, .5);
+  background-color: rgba(#000, .65);
   z-index: 100;
+  overflow-y: auto;
+  @media (min-width: $screen-md-min) {
+    align-items: center;
+  }
 }
 
 .modal {
-  background-color: #fff;
+  position: relative;
   flex: 1;
-  min-height: 50vh;
+  margin: Rem(100) 0;
+  @media (min-width: $screen-md-min) {
+    margin: Rem(40) 0;
+  }
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 2px 2px 32px rgba(#000, .8);
+  width: 90vw;
+  min-height: 90vh;
+
+  @media (min-width: $screen-md-min) {
+    max-width: Rem(850);
+    min-height: 50vh;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: Rem(12);
+  transition: transform .35s ease-out;
+  @media (min-width: $screen-md-min) {
+    margin-left: Rem(24);
+    left: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.15) rotate(15deg);
+  }
 }

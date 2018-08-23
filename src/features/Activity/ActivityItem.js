@@ -1,14 +1,17 @@
 import React from 'react';
 import moment from 'moment';
-import ModalTrigger, { Modal } from '@features/Modal';
+import ModalTrigger from '@features/Modal';
+import ActivityModal from './ActivityModal';
 import styles from './activity.scss';
 
 const ActivityItem = ({ type, transaction, application }) => {
   const date = moment.unix(transaction['unix-timestamp']);
 
   return (
-    <ModalTrigger modal={<Modal />}>
-      {({ openModal, closeModal }) => (
+    <ModalTrigger
+      modal={<ActivityModal type={type} transaction={transaction} application={application} />}
+    >
+      {({ openModal }) => (
         <li className={`${styles.activityItem} m-xs-b-60`}>
           <a onClick={openModal} className={styles.activity__link} href="#item">
             <div className={styles.activity__header}>{date.format('L')}</div>

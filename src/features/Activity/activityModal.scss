@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: Rem(315);
+  background-color: blue;
+}
+
+.selfie-wrapper {
+  text-align: center;
+  padding: Rem(80) 0 Rem(50);
+}
+
+.selfie {
+  width: Rem(260);
+  height: Rem(260);
+  border-radius: 50%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 Rem(40);
+}
+
+.attributes {
+  width: 100%;
+  margin: Rem(40) 0 Rem(30);
+  padding-top: Rem(30);
+  text-align: left;
+  border-top: 4px solid $color-15;
+}
+
+.attributes__item {
+  margin-bottom: Rem(60);
+}
