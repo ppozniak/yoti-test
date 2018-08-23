@@ -6,3 +6,16 @@
   min-height: calc(100vh - #{$headerHeight});
   overflow-y: auto;
 }
+
+.sidebar__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar__link {
+  display: flex;
+  background-color: $color-15;
+  color: inherit;
+  padding: Rem(40);
+}
