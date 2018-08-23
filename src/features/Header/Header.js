@@ -10,8 +10,10 @@ const Header = () => (
     </div>
     <div className={styles.rightWrapper}>
       <a href="#connect" className={styles.connectedButton}>
-        <span>Connected</span>
-        <div className="icon-connect-on" />
+        <div className={styles.connectedButtonInner}>
+          <span className="p-xs-r-16">Connected</span>
+          <div className="icon-connect-on" />
+        </div>
       </a>
       <a className={styles.profileLink} href="/" title="Your profile">
         <img
