@@ -3,6 +3,27 @@ import moment from 'moment';
 import { Modal } from '@features/Modal';
 import styles from './activityModal.scss';
 
+function prettifyAttributeKey(key) {
+  switch (key) {
+    case 'address':
+      return 'Adress';
+    case 'age':
+      return 'Age';
+    case 'given-names':
+      return 'Given name(s)';
+    case 'selfie':
+      return 'Selfie';
+    case 'email-address':
+      return 'Email';
+    case 'mobile-number':
+      return 'Mobile number';
+    case 'gender':
+      return 'Gender';
+    default:
+      return key.replace('_', ' ');
+  }
+}
+
 export default class ActivityModal extends Component {
   render() {
     const { type, application = {}, transaction } = this.props;
@@ -37,8 +58,14 @@ export default class ActivityModal extends Component {
           <dl className={styles.attributes}>
             {transaction.attributes.map(attribute => (
               <div className={styles.attributes__item} key={Object.keys(attribute)}>
-                <dt>{Object.keys(attribute)}</dt>
-                <dd>{Object.values(attribute)}</dd>
+                <dt className={styles.attributes__key}>
+                  {prettifyAttributeKey(...Object.keys(attribute))}
+                </dt>
+                {attribute.selfie && typeof attribute.selfie === 'string' ? (
+                  <img src={attribute.selfie} alt="" />
+                ) : (
+                  <dd className={styles.attributes__value}>{Object.values(attribute)}</dd>
+                )}
               </div>
             ))}
           </dl>

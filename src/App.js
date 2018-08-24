@@ -7,8 +7,6 @@ import styles from './styles/layout.scss';
 
 import mockData from './mock-data.json';
 
-console.log(mockData);
-
 class App extends Component {
   render() {
     return (

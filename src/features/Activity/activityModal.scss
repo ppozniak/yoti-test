@@ -36,3 +36,15 @@
 .attributes__item {
   margin-bottom: Rem(60);
 }
+
+.attributes__key {
+  color: $color-3;
+  font-size: Rem(22);
+  font-weight: normal;
+}
+
+.attributes__value {
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
