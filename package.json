@@ -59,6 +59,7 @@
     "lint": "eslint src",
     "deploy": "yarn build && gh-pages -d build"
   },
+  "homepage": "http://ppozniak.github.io/yoti-test/",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
