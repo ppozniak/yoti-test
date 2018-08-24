@@ -201,8 +201,7 @@ module.exports = {
                       includePaths: ['src/styles']
                     }
                   }
-                ]
-            })
+                ]})
               }
             ]
           },

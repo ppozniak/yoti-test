@@ -165,7 +165,7 @@ module.exports = {
           // tags. If you use code splitting, however, any async bundles will still
           // use the "style" loader inside the async code so CSS from them won't be
           // in the main CSS file.
-{
+          {
             test: /\.css$/,
             use: ExtractTextPlugin.extract({
               fallback: 'style-loader',
@@ -190,20 +190,27 @@ module.exports = {
               },
               {
                 use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: [
-                  {
-                    loader: 'css-loader',
-                    options: {
-                      modules: true,
-                      sourceMap: true,
-                      importLoaders: 2,
-                      localIdentName: '[name]_[local]__[hash:base64:5]',
+                  fallback: 'style-loader',
+                  use: [
+                    {
+                      loader: 'css-loader',
+                      options: {
+                        modules: true,
+                        sourceMap: true,
+                        importLoaders: 2,
+                        localIdentName: '[name]_[local]__[hash:base64:5]',
+                        camelCase: 'dashes'
+                      }
+                    },
+                    {
+                      loader: 'sass-loader',
+                      options: {
+                        data: '@import "_globals";',
+                        includePaths: ['src/styles']
+                      }
                     }
-                  },
-                  'sass-loader'
-                ]
-            })
+                  ]
+                })
               }
             ]
           },
